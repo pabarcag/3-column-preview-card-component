@@ -119,6 +119,19 @@ body{
         margin: 3em 1em;
     }
 
+
+
+    .card{
+        min-height: 500px;
+    }
+
+
+
+    .card__body{
+        padding-bottom: 2em;
+        justify-content: space-between;
+        flex: 1;
+    }
     .card__button{
         width: clamp(100px, 60%, 65%);
         padding: 1em;

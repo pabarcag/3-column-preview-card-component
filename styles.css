@@ -1,0 +1,133 @@
+:root{
+    --fs-400:'Lexend Deca', sans-serif;
+    --fs-700:'Big Shoulders Display', cursive;
+    --orange:#e28525;
+    --aqua:#016972;
+    --dark:#00403f;
+    --color:#fff;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.cards{
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, fr);
+    margin: 3em 1em;
+}
+
+.card{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.card__header{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.card__title{
+    font-family: var(--fs-700);
+    color: var(--color);
+    font-weight:700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+.card__body{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.card__description{
+    color: var(--color);
+    font-family: var(--fs-400);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.card__button{
+    font-size: 1rem;
+    font-family: var(--fs-400);
+    font-weight: 400;
+    width: 150px;
+    padding: 1em;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+
+
+/*modifiers*/
+
+.card--orange{
+    background-color: var(--orange);
+}
+
+.card--aqua{
+    background-color: var(--aqua);
+}
+
+.card--dark{
+    background-color: var(--dark);
+}
+
+.card__button--orange{
+    color: var(--orange);
+}
+
+.card__button--aqua{
+    color: var(--aqua);
+}
+.card__button--dark{
+    color: var(--dark);
+}
+
+@media screen and (min-width:500px){
+
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .cards{
+        max-width:1440px;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(min(100%, 100px), 350px));
+        grid-template-rows: repeat(1, 1fr);
+        margin: 3em 1em;
+    }
+
+    .card__button{
+        width: clamp(100px, 60%, 65%);
+        padding: 1em;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+    }
+
+    .card__button:hover{
+        transform: translateY(-3px);
+        background-color: rgb(236, 230, 230);
+    }
+}

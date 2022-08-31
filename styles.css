@@ -19,11 +19,11 @@ body{
 }
 
 .cards{
-    max-width: 600px;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, fr);
-    margin: 3em 1em;
+    grid-template-columns: repeat(auto-fit, 300px);
+    margin: 5em 1em;
+    justify-content: center;
+    align-items: center;
 }
 
 .card{
@@ -101,6 +101,14 @@ body{
     color: var(--dark);
 }
 
+.card__button:hover{
+    transform: translateY(-3px);
+    background-color: rgb(236, 230, 230);
+}
+
+
+
+/* I've done this before, but I think I found a better solution without media queries
 @media screen and (min-width:500px){
 
 
@@ -141,4 +149,4 @@ body{
         transform: translateY(-3px);
         background-color: rgb(236, 230, 230);
     }
-}
+} */

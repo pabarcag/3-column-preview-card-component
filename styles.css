@@ -16,6 +16,7 @@
 
 body{
     min-height: 100vh;
+    background-color: #f2f2f2;
 }
 
 .cards{
@@ -32,7 +33,7 @@ body{
     flex-direction: column;
     gap: 2em;
     padding: 2em;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .card__header{
